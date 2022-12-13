@@ -7,13 +7,15 @@ export default{
         botoText: "Compra ahora",
         botoUrl: "http://google.fr",
         botoType:"extern",
+        preu:"299",
 
     },
-    colors:["dark","light"],
+    colors:["dark","light","green"],
     galeria:[
         { img: "c1.jpg", title: "CHAIRS", color: "light"},
         { img: "c2.jpg", title: "LOUNGE CHAIRS", color: "light"},
         { img: "c3.png", title: "OFFICE CHAIRS", color: "dark"},
+        { img: "c4.png", title: "KITCHEN FURNITURE", color: "green"},
         { img: "c6.png", title: "KITCHEN FURNITURE", color: "light"},
         { img: "c8.png", title: "TABLES NIGHTSTANDS", color: "dark"},
         { img: "c9.png", title: "SLEEPING BEDS", color: "dark"},

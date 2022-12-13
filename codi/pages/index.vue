@@ -17,15 +17,22 @@
     </v-col>
     <v-col cols="12" md="6">
       <!-- Opcions i preus-->
-      
-        <v-radio-group v-model="colorSelecionat">
+      <!-- <v-radio-group v-model="colorSelecionat">
           <v-radio
             :label="color"
             :value="color"
           v-for="color in info.colors">
 
           </v-radio>
-        </v-radio-group>
+        </v-radio-group> -->
+        <Color
+          @canviColorComponent="canviDeColor"
+        ></Color>
+       <v-spacer></v-spacer>
+       <h1 v-if="info.inici">{{info.inici.subtitol}}</h1>
+        <div v-if="info.inici" style="font-size:100px">
+          {{info.inici.preu}}€</div>
+        <v-btn @click="afegirProducteALaCistella">comprar</v-btn>
     </v-col>
   </v-row>
 </v-container>
@@ -43,6 +50,17 @@ export default {
     colorSelecionat:"light",
     info:{},
     }  
+  },
+  methods:{
+    canviDeColor(nouColor){
+      console.log("l'usuari ha canvait de color",nouColor)
+      this.colorSelecionat = nouColor
+    },
+    afegirProducteALaCistella(){
+      console.log(this.info.inici.subtitol)
+      this.$store.commit("botiga/afegirProducte",{"producte":this.info.inici.subtitol})
+      console.log(this.$store.getters['botiga/getProductes'])
+    }
   }
 }
 </script>

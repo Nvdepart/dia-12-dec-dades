@@ -6,7 +6,7 @@
         <v-container
          style="height:100%">
             <v-row style="height:100%" align="center">
-                <v-col 
+                <v-col
                 cols="12" md="4" offset-md="3"
                 align="center">
                 <h3>{{heroInfo.subtitol}}</h3>
@@ -15,7 +15,7 @@
                 <v-btn v-if="heroInfo.botoType='extern'"
                     target="_blank"
                     :href="heroInfo.botoUrl"
-                    style="background-color:yellow color:blue">
+                    style="background:yellow; color:green">
                     {{heroInfo.botoText}}</v-btn>
                     <v-btn v-else
                     :to="heroInfo.botoUrl"
